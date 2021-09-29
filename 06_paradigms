@@ -1,0 +1,9 @@
+//Scheme
+(define helloWorld
+  (display "Hello, world!"))
+
+//Netlogo
+write "Hello, world!"
+
+//Python
+print("Hello, world!")
