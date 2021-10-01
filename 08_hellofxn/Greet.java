@@ -12,7 +12,7 @@ public class Greet {
 		greet("Emily");
 	}
 	public static void greet(String name) {
-		System.out.print("Why, hello there," + name + ". How do you do?");
+		System.out.print("Why, hello there, " + name + ". How do you do?");
 	}
 }
 
