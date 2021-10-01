@@ -6,7 +6,7 @@ HW08 -- Refactor Freshie Zero/Writing java code that greets specific people
 */
 
 public class Greet {
-	public static void main(String[] args}
+	public static void main(String[] args) {
 		greet("Brian");
 		greet("Kaitlin");
 		greet("Emily");
