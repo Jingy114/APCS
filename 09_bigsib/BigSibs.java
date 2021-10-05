@@ -1,9 +1,14 @@
-/*TNPG:.. Jing Yi Feng 
+/*TNPG:.. Jing Yi Feng & Biscuit 
 APCS
-HW09 -- What Are BigSibs Good For?/Topic/Summary... (Aim for concision, brevity>
+HW09 -- What Are BigSibs Good For?
 2021-10-01
-*/
 
+DISCOVERIES
+-To run Greet.java the computer runs greet in BigSibs.java.
+
+UNRESOLVED QUESTIONS
+-none
+*/
 public class BigSibs {
         public static void main(String[] args) {
                
