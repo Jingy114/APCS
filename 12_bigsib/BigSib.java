@@ -9,13 +9,23 @@ QCC
 
 */
 
-public class BigSib {
-	public static void main(String[] args){
+public class Greet {
+	public static void main (String[] args){
+		String greeting;
+BigSib richard = newBigSib();
+greeting = (richard.setHelloMsg("Word up") + ""+ richard.greet("freshman"));
+System.out.println(greeting);
 
-	}
+BigSib mark = newBigSib();
+greeting = (mark.setHelloMsg("Salutaous") + ""+ richard.greet("Dr.Spaceman"));
+System.out.println(greeting);
 
-	public static String greet(String name) {
-		return(greeting);
+BigSib farihah = newBigSib();
+greeting = (farihah.setHelloMsg("Hey ya") + "" + farihah.greet("Kong Fooey"));
+System.out.println(greeting));
+
+BigSib brad = newBigSib();
+greeting = (brad.setHelloMsg("Sup") + ""+brad.greet("mom"));
+System.out.println(greeting);
 	}
 }
-
