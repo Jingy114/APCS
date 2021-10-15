@@ -10,5 +10,27 @@ DISCO
 -     
 QCC
 -what are overloaded methods?
+-why are there seperate greet.class and BigSib.class files w=on github when it was not there for previous hws?
 */
+public class Greet {
+	public static void main (String[] args) {
+		String greeting;
+		BigSib richard = new BigSib();
+		BigSib mark = new BigSib();
+		BigSib farihah = new BigSib(); 
+		BigSib bob = new BigSib();
 
+	greeting = richard.greet("freshman");
+		System.out.print(greeting);
+
+	greeting = mark.greet("Dr.Spaceman");
+	System.out.print(greeting);
+
+	greeting = farihah.greet("Kong Fooey");
+	System.out.print(greeting);
+
+	greeting = bob.greet("mom");
+	System.out.print(greeting);
+
+	}
+}
