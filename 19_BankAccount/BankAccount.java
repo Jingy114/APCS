@@ -5,9 +5,10 @@ HW 19 - Mo Money Mo Problems...MORE AWESOME
 2021-10-18
 
 DISCO
--
+-The if statement works very similarly to the if staetments for phython or scheme.
 QCC
--
+-WHy does both true and false return for the login?
+-Is there a way to input a value for it to return either treu or false but not both?
 */
 public class BankAccount {
 
