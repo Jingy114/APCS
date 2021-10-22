@@ -18,9 +18,10 @@ public class Driver {
 
 
     //test default constructor
-    /*===================TOP==========================
+    
       Coin mine = new Coin();
       //test 1st overloaded constructor
+      /*===================TOP==========================
       Coin yours = new Coin( "quarter" );
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
