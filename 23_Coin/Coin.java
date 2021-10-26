@@ -1,7 +1,13 @@
 /***
- *  class Coin
- *  by Clyde "Thluffy" Sinclair
- *  SKELETON
+TNPG: Dream Team Jing Feng, Nafix Labib
+HW 23 - What Does Equality Look Like?
+2021-10-24
+
+QCC
+-I had a lot of trouble with the method for toString and flip
+-does Math.random() generate any random int or double and from what intervals?
+DISCO
+-
  ***/
 
 public class Coin {
@@ -26,7 +32,7 @@ public int bias;
 
   }
   
-
+/*
 public Coin(String name) {
 	name = name;
 	
@@ -47,19 +53,29 @@ public String flip(boolean upFace){
 	
 }
 
-public boolean equals(upFace, upFace){
-	if(){
-	
+public boolean equals(upFace, otherCoin){
+	if(upFace = otherCoin){
+		return true;
 	}
 	else{
-	
+		return false;
 	}
 }
 
 public void assignValue(String name){
+	if (name.equals ("penny")) {
+		value = 0.01;
+	} else if (name.equals ("nickel")) {
+		value = 0.05;
+	} else if (name.equals ("dime")) {
+		value = 0.10;
+	} else if (name.equals ("quarter")) {
+		value = 0.25;
+	}
+	return value
 	
 }
-
+*/
 
 
   /***
@@ -121,7 +137,7 @@ public class Driver {
       postcond:
   ***/
   public Coin( String s ) {
-
+	name = s
   }
 
 
@@ -131,7 +147,8 @@ public class Driver {
       postcond:
   ***/
   public Coin( String s, String nowFace ) {
-
+	name = s;
+	newFace = nowFace;
   }
 
 
@@ -166,6 +183,19 @@ public class Driver {
    * Returns value assigned.
    ***/
   private double assignValue( String s ) {
+	if (name.equals ("penny")) {
+		value = 0.01;
+	} else if (name.equals ("nickel")) {
+		value = 0.05;
+	} else if (name.equals ("dime")) {
+		value = 0.10;
+	} else if (name.equals ("quarter")) {
+		value = 0.25;
+	} else if (name.equals ("half dollar")) {
+		value = 0.50;
+	} else if (name.equals ("dollar")) {
+		value = 1.00;
+	return value
 
   }
 
@@ -176,7 +206,8 @@ public class Driver {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-
+	s = upFace;
+	d = bias;
   }
 
 
@@ -190,7 +221,7 @@ public class Driver {
    * Returns "heads" or "tails"
    ***/
   public String flip() {
-
+	//very confused about how to write flip
   }
 
 
@@ -201,7 +232,12 @@ public class Driver {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-
+	if (upFace = other.upFace) {
+		return true;
+		}
+	else {
+		eturn false;
+	}
   }
 
 
@@ -211,7 +247,7 @@ public class Driver {
    * postcond: Return String comprised of name and current face
    ***/
   public String toString() {
-
+// could not figure out 
   }
 
 }//end class
