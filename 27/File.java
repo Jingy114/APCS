@@ -16,6 +16,8 @@ String reverseF(String s) {
 }
 
 String reverseR(String s) {
-	if s.length()
+	if (s.length()==1) {
+		return s;
+	}
 	return s.substring(s.length()-1) + reverseR(s.substring(0,s.length()-1));
 }
