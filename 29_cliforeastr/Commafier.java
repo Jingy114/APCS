@@ -1,6 +1,17 @@
 /*
-headin
-g*/
+Heroes of the Zeroes - Nafiz Labib, Jing Yi Feng, Jomin Zhang
+APCS
+HW 29 - Which Way Do You Roll?
+2021-11-02
+Time Spent: ~ 1 hour
+
+DISCO
+-Integer.parseInt converts from String to int
+-In the main method the for (String arg : args) allows main method to run 
+QCC
+-are there alternative ways to convert from int to string without using parseInt?
+-If parseInt is used in the main method does it still need to be used in the body?
+*/
 
 public class Commafier {
 
