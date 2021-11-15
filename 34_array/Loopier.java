@@ -1,8 +1,9 @@
-/*<Frist> <Lsat>
-APCS
-HW<nn> -- <Title/Topic/Summary... (Aim for concision, brevity, CLARITY. Write to your future self...)>
-<yyyy>-<mm>-<dd>
-time spent: <elapsed time in hours, rounded to nearest tenth>
+/*
+* TNPG: Four {Fang Chen, Kaitlin Ho, Jing yi Feng}
+* APCS
+* HW34 -- A Pirate's Life for Me
+* 2021-11-15
+* time spent: 1 hr
 */
 
 public class Loopier {
