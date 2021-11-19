@@ -1,0 +1,40 @@
+Jing Yi Feng
+APCS
+HW36 -- All Quacked Up
+2021-11-18
+time spent: .5 hr
+
+Appendix D: Debugging 
+Three Types of possible errors to encounter:
+Compile-time error: wrong java syntax 
+Read the error message; it will usually contain snippets of information in jargon or it will indicate where in the code the computer ran into a problem. 
+Common syntax errors: parenthesis and brackets placement, spelling, semicolons, uppercase and lowercase, 
+Make sure u run the right code 
+Debugging by bisection
+Run-time error: something goes wrong while running 
+“hanging” means being caught in an infinite loop or infinite reversion. Add print statements “entering the loop” before the start of loop and “exiting the loop” after and if the first is printed the program is in an infinite loop. Result in stackOverflowError. 
+Infinite recursion: if the program doesn’t reach the base case there’s a problem. 
+Exception:
+NullPointerException: access instance variable or method on object but variable is null (bc there’s no assigned value to it)
+ArrayIndexOutOfBoundsException: index used for array is negative or more than the length of the array -1. 
+StackOverflowError: infinite recursion 
+FileNotFoundException: file not found 
+ArithmeticException: error with arithmetics
+
+Logic errors: program does the wrong thing 
+Try to create mental model of how the code runs (Java visualizer) 
+Separate class and methods and test them independently 
+Common Logic errors:
+Integers for countable things; double for measurable things
+Never use == with doubles, use equals method
+Break complex expressions to assignments of temporary variables
+Use println as opposed to just print because println will print immediately
+
+
+Miscellaneous Notes
+-Incremental Development : start with working program and add onto it but by bit “never stray from working code”
+-Usually only the first error message is reliable. Fix errors one at a time. 
+-Debugging by bisection: create backup file deleting half the code from the original and test to see if it runs. If it does, the error has to be in the second half of the code. 
+-Remove or comment out sections of outputs that are not needed to make it easier to read and understand. Also organize code to make things easier to read.
+-If really really stuck and experiencing frustration, rage, superstitious beliefs, sour grapes: get away from the computer and go for a walk. 
+-Get someone to help. Read or try to explain the code to them or your ducky and you might notice the mistake meanwhile. 
