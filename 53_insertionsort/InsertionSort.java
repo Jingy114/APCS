@@ -16,7 +16,7 @@ Once partition is at the end of the list, the list is sorted
  *
  * QCC
  * q0: How many passes to sort n elements?
- * a0: We need n passes to sort n elements.
+ * a0: We need n-1 passes to sort n elements.
  * q1: What do you know after pass p?
  * a1: After pass p, we know that p values are in ascending order.
  * q2: How will you know when sorted?
