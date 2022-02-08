@@ -19,4 +19,12 @@ QCC
 * How do we make sure the cards are sorted if we don't see the card?
 * Do we have the split the cards into exactly two equal portions- does it affect the outcome?
 * What's the point of giving the card back to the one that sent it? How does that sort the deck?
+================================================
 
+THINKER FIRMWARE
+------------------------------------------------
+0. Receive the deck of cards given. Declare if sorted or unsorted.
+1. Split the deck into two and pass on to two other turtles (that have not yet recieved any cards).
+2. Wait for the cards to be sent back to you from the turtle you gave the cards to.
+3. Send the czrds you got back to the turtle that gave you the card. 
+================================================
