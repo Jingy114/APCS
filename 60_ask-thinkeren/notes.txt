@@ -26,5 +26,5 @@ THINKER FIRMWARE
 0. Receive the deck of cards given. Declare if sorted or unsorted.
 1. Split the deck into two and pass on to two other turtles (that have not yet recieved any cards).
 2. Wait for the cards to be sent back to you from the turtle you gave the cards to.
-3. Send the czrds you got back to the turtle that gave you the card. 
+3. Send the cards you got back to the turtle that gave you the card. 
 ================================================
