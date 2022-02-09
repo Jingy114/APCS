@@ -1,0 +1,37 @@
+Jing Yi Feng
+APCS
+HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle 
+2022-02-07
+time spent: .5 hr
+
+DISCO
+------------------------------------------------
+* When we receive a deck of cards we first declare if it is sorted or unsorted.
+* The only time when we know for sure the card is sorted is when we have one card because an array with one value is always sorted.
+* A thinkeren with possession of card(s) can only give or recieve and communicste with three other thinkeren.
+* I can see how this relates to netlogo, us thinkerens can be seen as turtles that are splitting up and doing the tasks. It also makes sense that we can only communicate with three other thinkeren because turtles can communicate with the patches and other turtles around them.
+================================================
+
+QCC
+------------------------------------------------
+* When we receive cards do we give them all to others and not keep any for ourselves?
+* Once we give the cards we received why do we need them back?
+* How do we make sure the cards are sorted if we don't see the card?
+* Do we have the split the cards into exactly two equal portions- does it affect the outcome?
+* What's the point of giving the card back to the one that sent it? How does that sort the deck?
+================================================
+
+THINKER FIRMWARE
+------------------------------------------------
+0. Receive the deck of cards given. Declare if sorted or unsorted.
+1. Split the deck into two and pass on to two other turtles (that have not yet recieved any cards).
+2. Wait for the cards to be sent back to you from the turtle you gave the cards to.
+3. Send the cards you got back to the turtle that gave you the card. 
+================================================
+
+NEW
+------------------------------------------------
+Keep splitting cards into halves and dsitrubute to two other turtles.
+Repeat the process until we know for sure what we have is sorted (one single card).
+Wait for the card you gave out to be given back and then sort it by comparing two and two at a time.
+Give your sorted deck to the person that gave it to you and repeat
