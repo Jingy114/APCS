@@ -1,3 +1,12 @@
+/**
+Jing Yi Feng + Ari Gurovich
+APCS pd06
+HW61 -- Instructions so Simple... / merge sort
+2022-02-8
+time spent: 2 hours
+**/
+
+
 /***
   class MergeSort
   Implements mergesort on array of ints.
