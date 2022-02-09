@@ -12,7 +12,9 @@ time spent: 2 hours
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
-
+	1. Check if array is sorted (if it has one element)
+	2. SPlit array into halves and repeat until everything is sorted (one single element)
+	3. Do mergesort to sort all the elements in ascending order.
   ***/
 
 public class MergeSort
