@@ -1,0 +1,27 @@
+Jing Yi Feng
+APCS
+HW63: Read/Review/Expand
+2022-02-10
+time spent: 
+
+DISCO
+------------------------------------------------
+* Q：sentimentVal method signature
+* A: sentimentalVal(string)
+
+* Q: Does method require parameter? If so, what type of parameter is required? What happens if yu pass a different parameter instead?
+* A: The method requires a string input, if you try to put anything else it will not compile/error message.
+
+* Q: Does the method return a value? If so, what is the return type?
+* A: It should return a double. 
+
+
+================================================
+
+QCC
+------------------------------------------------
+* Each words corresponds with a specific positive or negative value accordng to cleanSentiment.csv but where do the values come from?
+* Are there specific values for independent/single letters?
+* Whst do the positive and negatives mean?
+
+================================================
