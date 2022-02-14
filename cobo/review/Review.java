@@ -223,13 +223,10 @@ public class Review {
       return randomNegativeAdj();
     }
   }
-/*
+
   public static void main (String[] args){
-    System.out.println(sentimentVal(“happily”));
-    System.out.println(sentimentVal(“terrible”));
-    System.out.println(sentimentVal(“cold”));
-    System.out.println(totalSentimentVal(“SimpleReview.txt”))
+    System.out.println(updatedFakeReview("SampleReview.txt"));
+    System.out.println(fakeReview("SampleReview.txt"));
   
 }
-*/
 }
