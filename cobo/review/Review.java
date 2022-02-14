@@ -97,8 +97,69 @@ public class Review {
       return 0;
     }
   }
+
+  public static double totalSentiment (String filename){
+    String name = textToString(filename);
+    String[]s = name.split(" ");
+    double total = 0;
+    for(String word : s){
+      word = removePunctuation(word);
+      total += sentimentVal(word);
+    }
+    return total;
+  }
   
-  /**
+  public static int starRating(String fileName){
+    double totalSentiment = totalSentiment(fileName);
+    if(totalSentiment > 15)
+      {
+      return 4;
+      }
+      else if(totalSentiment > 10)
+      {
+        return 3;
+      }
+      else if(totalSentiment > 5)
+      {
+        return 2;
+      }
+      else if (totalSentiment > 0)
+      {
+        return 1;
+      }
+      else 
+      {
+        return 0;
+      }
+  }
+
+  public static String fakeReview(String fileName){
+    String review = textToString(fileName);
+    String fake = "";
+    for(int i = 0; i < review.length()-1; i++){
+      if(review.substring(i, i+1).equals("*")){
+        i++;
+        String substitute = "";
+        boolean word = true;
+        while(word){
+          substitute += review.substring(i, i+1);
+          i++;
+          if(review.substring(i, i++).equals(" "))
+          {
+            word = false;
+          }
+        }
+        substitute = substitute.replaceAll("\\p{Punct}", "");
+        substitute = randomAdjective() + " ";
+        fake += substitute;
+      }else
+      {
+        fake += review.substring(i, i+1);
+      }
+    }
+    return fake;
+  }
+    /**
    * Returns the ending punctuation of a string, or the empty string if there is none 
    */
   public static String getPunctuation( String word )
@@ -162,4 +223,13 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+/*
+  public static void main (String[] args){
+    System.out.println(sentimentVal(“happily”));
+    System.out.println(sentimentVal(“terrible”));
+    System.out.println(sentimentVal(“cold”));
+    System.out.println(totalSentimentVal(“SimpleReview.txt”))
+  
+}
+*/
 }
