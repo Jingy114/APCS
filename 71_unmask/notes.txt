@@ -1,0 +1,11 @@
+// Submarine Cable History: Sophia Eiden, Jing Yi Feng, David Deng
+// APCS pd6
+// HW71 -- Reading for intent, tracing for VICTORY
+// 2022-03-07m
+// time spent: 0.3 hrs
+
+QCC
+-What exactly does it do?
+-Is it a sort or no?
+-What are the preconditions of a b and c? Does it affect how it runs/if it is even runable if changed?
+-
