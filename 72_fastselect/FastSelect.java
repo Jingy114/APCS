@@ -1,4 +1,4 @@
-public class FastSelect {
+kpublic class FastSelect {
 
 //swapping elements x and y in an array
   public static void swap(int[] arr, int x, int y){
@@ -15,7 +15,7 @@ public class FastSelect {
     for(int i = a; i < b; i++){
       if(arr[i] <= pivot){
         swap(arr, i, c);
-        c++;
+        c++; // heyyy shawty
       }
     }
     swap(arr, c, b);
@@ -30,10 +30,20 @@ public static void print(int[] arr){
 }
 
 public static int fastSelect(int[] arr, int a, int b, int k){
-  if (a ==b){
-    return arr[a];
+  int s = 0;
+  printArr(array);
+  int kVal = array(k);
+  s = partition(array, a, b, k);
+
+  if(k == (y-1){
+    return kVal;
+  }else if(s < (y-1){
+    return fastSelect(y-s, array, s, b, b);
+  }else{
+    return fastSelect(y, array, a, s-1, s-1);
   }
-  int c = 
+  }
+  }
 }
 
 //exmaple arrays
