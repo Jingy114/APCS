@@ -1,15 +1,3 @@
-// Clyde Sinclair
-// APCS pd0
-// HW75 -- implement a node for a linked list
-// 2022-03-14m
-// time spent:  hrs
-
-/***
- * class LLNode
- * Implements a node, for use in lists and other container classes.
- * Stores its data as a String
- **/
-
 public class LLNode
 {
   //instance vars

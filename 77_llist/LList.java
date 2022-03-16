@@ -1,131 +1,88 @@
-// Clyde Sinclair
-// APCS pd0
-// HW76 -- implement linked list
-// 2022-03-14m
-// time spent:  hrs
-
-
-/***
- * class LList
- * Implements a linked list of LLNodes, each containing String data
- **/
-
-public class LList implements List //interface def must be in this dir
+public class LLNode
 {
-
   //instance vars
-  private LLNode _head;
-  private int _size;
+  private String _cargo;
+  private LLNode _nextNode;
 
-  // constructor -- initializes instance vars
-  public LList( )
+  // constructor
+  public LLNode( String value, LLNode next )
   {
-    _head = null; //at birth, a list has no elements
-    _size = 0;
+    _cargo = value;
+    _nextNode = next;
   }
 
 
-  //--------------v  List interface methods  v--------------
-
-  public boolean add( String newVal )
+  //--------------v  ACCESSORS  v--------------
+  public String getCargo()
   {
-    LLNode tmp = new LLNode( newVal, _head );
-    _head = tmp;
-    _size++;
-    return true;
+    return _cargo;
   }
 
-
-  public String get( int index )
+  public LLNode getNext()
   {
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
+    return _nextNode;
+  }
+  //--------------^  ACCESSORS  ^--------------
 
-    String retVal;
-    LLNode tmp = _head; //create alias to head
 
-    //walk to desired node
-    for( int i=0; i < index; i++ )
-      tmp = tmp.getNext();
-
-    //check target node's cargo hold
-    retVal = tmp.getCargo();
-    return retVal;
+  //--------------v  MUTATORS  v--------------
+  public String setCargo( String newCargo )
+  {
+    String foo = getCargo();
+    _cargo = newCargo;
+    return foo;
   }
 
-
-  public String set( int index, String newVal )
+  public LLNode setNext( LLNode newNext )
   {
-
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
-
-    LLNode tmp = _head; //create alias to head
-
-    //walk to desired node
-    for( int i=0; i < index; i++ )
-      tmp = tmp.getNext();
-
-    //store target node's cargo
-    String oldVal = tmp.getCargo();
-
-    //modify target node's cargo
-    tmp.setCargo( newVal );
-
-    return oldVal;
+    LLNode foo = getNext();
+    _nextNode = newNext;
+    return foo;
   }
-
-
-  //return number of nodes in list
-  public int size() { return _size; }
-
-  //--------------^  List interface methods  ^--------------
+  //--------------^  MUTATORS  ^--------------
 
 
   // override inherited toString
   public String toString()
   {
-    String retStr = "HEAD->";
-    LLNode tmp = _head; //init tr
-    while( tmp != null ) {
-	    retStr += tmp.getCargo() + "->";
-	    tmp = tmp.getNext();
-    }
-    retStr += "NULL";
-    return retStr;
+    return _cargo;
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    LList james = new LList();
 
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
+    //Below is an exercise in creating a linked list...
 
-    james.add("beat");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
+    //Create a node
+    LLNode first = new LLNode( "cat", null );
 
-    james.add("a");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
+    //Create a new node after the first
+    first.setNext( new LLNode( "dog", null ) );
 
-    james.add("need");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
+    //Create a third node after the second
+    first.getNext().setNext( new LLNode( "cow", null ) );
 
-    james.add("I");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
+    /* A naive list traversal, has side effects.... ??
+       while( first != null ) {
+       System.out.println( first );
+       first = first.getNext();
+       }
+    */
 
-    System.out.println( "2nd item is: " + james.get(1) );
+    //Q: when head ptr moves to next node in list, what happens to the node it just left?
+    //A: garbage collector reclaims that memory
 
-    james.set( 1, "got" );
-    System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
+    //  so, better: (w/o moving first)
+    /*
+    LLNode temp = first;
+    while( temp != null ) {
+      System.out.println( temp );
+      temp = temp.getNext();
+    }
+    */
 
-    System.out.println( james );
-  }
+  }//end main
 
-}//end class LList
+}//end class LLNode
