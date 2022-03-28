@@ -1,3 +1,9 @@
+// Tin Pig: Ryan Lau, Jing Yi Feng, Corina Chen
+// APCS pd06
+// HW 82: Roll Your Own Iterator
+// 2022-03-28m
+// time spent: 0.8 hrs
+
 /***
  * class LList v6
  * Implements a linked list of DLLNodes.
@@ -44,13 +50,13 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     if ( index < 0 || index > size() )
       throw new IndexOutOfBoundsException();
 
-    else if ( index == size() )
+    else if ( index == size() ) 
       addLast( newVal );
 
     DLLNode<T> newNode = new DLLNode<T>( newVal, null, null );
 
     //if index==0, insert node before head node
-    if ( index == 0 )
+    if ( index == 0 ) 
       addFirst( newVal );
     else {
       DLLNode<T> tmp1 = _head; //create alias to head
@@ -60,7 +66,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
         tmp1 = tmp1.getNext();
 
       //init a pointer to node at insertion index
-      DLLNode<T> tmp2 = tmp1.getNext();
+      DLLNode<T> tmp2 = tmp1.getNext(); 
 
       //insert new node
       newNode.setNext( tmp2 );
@@ -152,9 +158,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public Iterator<T> iterator()
+  public Iterator<T> iterator()/* YOUR CODE HERE */
   {
     return new MyIterator();
+    /* YOUR CODE HERE */
   }
 
   //--------------------------------------------------------
@@ -252,24 +259,39 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     private boolean _okToRemove; // flag indicates next() was called
 
     //constructor
+
     public MyIterator()
     {
-      _okToRemove = false;
+      /* YOUR CODE HERE */
+        _okToRemove = false;
+        _dummy = _head;
     }
 
     //-----------------------------------------------------------
     //--------------v  Iterator interface methods  v-------------
     //return true if iteration has more elements.
-    public boolean hasNext(){
-      return _dummy.getNext() != null;
-	}
+    public boolean hasNext() 
+    {
+      /* YOUR CODE HERE */
+      return _dummy != null;
+    }
 
 
     //return next element in this iteration
-    public T next()
+    public T next() 
     {
-      _okToRemove = true;
-      return _dummy.getCargo();
+        if (!hasNext()) throw new NoSuchElementException();
+
+        _okToRemove = true;
+        T ret = _dummy.getCargo();
+        _dummy = _dummy.getNext();
+        /*
+        System.out.println("dummy: " + _dummy);
+        System.out.println("head: "  + _head);
+        System.out.println("tail: "  + _tail);
+        */
+        return ret;
+
     }
 
 
@@ -278,7 +300,18 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //               (...so that hasNext() will not crash)
     public void remove()
     {
-      _dummy = _dummy.getNext();   
+        if (!_okToRemove) return;
+
+        _okToRemove = false;
+        if (_dummy == null) {
+            removeLast();
+        } else if (_dummy.getPrev() == _head) {
+            removeFirst();
+        } else {
+            DLLNode<T> newPrev = _dummy.getPrev().getPrev();
+            newPrev.setNext(_dummy);
+            _dummy.setPrev(newPrev);
+        }
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
@@ -289,7 +322,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //main method for testing
   public static void main( String[] args )
   {
-    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -332,7 +365,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class LList
