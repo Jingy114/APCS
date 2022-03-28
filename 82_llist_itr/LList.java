@@ -154,7 +154,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //return an Iterator over this list
   public Iterator<T> iterator()
   {
-    /* YOUR CODE HERE */
+    return new MyIterator();
   }
 
   //--------------------------------------------------------
