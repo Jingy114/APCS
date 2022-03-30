@@ -1,3 +1,9 @@
+// Tin Pig: Ryan Lau, Jing Yi Feng, Corina Chen
+// APCS pd06
+// HW 84: Stack: What Is It Good For?
+// 2022-03-29w
+// time spent: 0.7hrs
+
 /***
  * class Latkes
  * v1
@@ -41,11 +47,9 @@ public class Latkes
   {
     String retStr = "";
     if ( isEmpty() )  return null;
-    System.out.println(_stackSize)
     retStr = _stack[ _stackSize---1 ];
     return retStr;
   }
-
 
 
   //chk for emptiness
