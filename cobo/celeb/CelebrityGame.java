@@ -2,7 +2,7 @@
 // APCS
 // L09: Some Folks Call It A Charades
 // 2022-04-26
-// time spent:
+// time spent: 3.8 hrs
 
 import java.util.ArrayList;
 
@@ -60,7 +60,18 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return false;
+		guess = guess.trim();
+		boolean yourGuess = guess.equalsIgnoreCase(gameCelebrity.getAnswer());
+		if (yourGuess){
+			celebGameList.remove(gameCelebrity);
+			if (celebGameList.size() == 0){
+				gameCelebrity = new Celebrity("", "");
+			}
+			else{
+				gameCelebrity = celebGameList.get(0);
+			}
+		}
+		return yourGuess;
 	}
 
 	/**
@@ -123,7 +134,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**
@@ -134,7 +145,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -145,6 +156,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }
